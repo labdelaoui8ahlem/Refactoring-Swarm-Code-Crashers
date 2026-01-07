@@ -2,11 +2,13 @@ import argparse
 import sys
 import os
 from dotenv import load_dotenv
-from src.utils.logger import log_experiment
+from utils.logger import log_experiment  
 
 load_dotenv()
 
 def main():
+    from utils.logger import log_experiment, ActionType 
+    #
     parser = argparse.ArgumentParser()
     parser.add_argument("--target_dir", type=str, required=True)
     args = parser.parse_args()
@@ -16,7 +18,7 @@ def main():
         sys.exit(1)
 
     print(f"🚀 DEMARRAGE SUR : {args.target_dir}")
-    log_experiment("System", "STARTUP", f"Target: {args.target_dir}", "INFO")
+    log_experiment("System", ActionType.STARTUP, f"Target: {args.target_dir}", "INFO", "OK")
     print("✅ MISSION_COMPLETE")
 
 if __name__ == "__main__":
