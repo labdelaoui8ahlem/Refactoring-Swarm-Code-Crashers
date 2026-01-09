@@ -3,8 +3,6 @@ import os
 import uuid
 from datetime import datetime
 from enum import Enum
-from utils.logger import ActionType
-
 
 # Chemin du fichier de logs
 LOG_FILE = os.path.join("logs", "experiment_data.json")

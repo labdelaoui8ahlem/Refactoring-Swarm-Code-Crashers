@@ -1,4 +1,4 @@
-from src.utils.filesystem import (
+from filesystem import (
     read_file,
     write_file,
     list_py_files,
@@ -9,7 +9,7 @@ from src.utils.filesystem import (
 # --- READ TEST ---
 print("READ FILE:")
 try: 
-   print(read_file("sandbox\code_bugs\bad_style.py"))
+   print(read_file("code_bugs/bad_style.py"))
 except FileNotFoundError as e:
     print("File not found, continuing:", e)
 except SandboxViolationError as e:
