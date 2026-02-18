@@ -15,6 +15,7 @@ class ActionType(str, Enum):
     GENERATION = "CODE_GEN"     # Création de nouveau code/tests/docs
     DEBUG = "DEBUG"             # Analyse d'erreurs d'exécution
     FIX = "FIX"                 # Application de correctifs
+    STARTUP = "STARTUP"
 
 def log_experiment(agent_name: str, model_used: str, action: ActionType, details: dict, status: str):
     """
