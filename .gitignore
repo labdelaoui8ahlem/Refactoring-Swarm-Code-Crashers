@@ -1,17 +1,22 @@
-# .gitignore
+# --- Python & System Garbage ---
 __pycache__/
 *.pyc
-# .gitignore
-__pycache__/
-*.pyc
-venv/
-.env
 .DS_Store
 
-# Dossier de travail temporaire (ne pas récupérer les modifications des étudiants ici)
+# --- Virtual Environment ---
+venv/
+env/
+
+# --- Environment Variables ---
+# Ignore the actual secrets file
+.env
+# Note: .env.example will still be tracked (which is what you want)
+
+# --- Temporary Work ---
 sandbox/
 
-# LOGS : On ignore tout le dossier logs...
+# --- Logs ---
+# Ignore all files inside the logs folder...
 logs/*
-# ...SAUF le fichier de données final qu'on veut récupérer
+# ...EXCEPT the specific experiment data file
 !logs/experiment_data.json
